@@ -1,0 +1,14 @@
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Logica.deps.json
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Logica.dll
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Logica.pdb
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Datos.dll
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Entidad.dll
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Entidad.pdb
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\bin\Debug\netstandard2.1\Datos.pdb
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.csprojAssemblyReference.cache
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfoInputs.cache
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfo.cs
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.csproj.CoreCompileInputs.cache
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.csproj.CopyComplete
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.dll
+c:\Users\HP\Downloads\EjercicioParcial-master\Logica\obj\Debug\netstandard2.1\Logica.pdb

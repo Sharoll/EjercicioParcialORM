@@ -1,0 +1,9 @@
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\bin\Debug\netstandard2.1\Entidad.deps.json
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\bin\Debug\netstandard2.1\Entidad.dll
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\bin\Debug\netstandard2.1\Entidad.pdb
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\obj\Debug\netstandard2.1\Entidad.csprojAssemblyReference.cache
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\obj\Debug\netstandard2.1\Entidad.AssemblyInfoInputs.cache
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\obj\Debug\netstandard2.1\Entidad.AssemblyInfo.cs
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\obj\Debug\netstandard2.1\Entidad.csproj.CoreCompileInputs.cache
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\obj\Debug\netstandard2.1\Entidad.dll
+c:\Users\HP\Downloads\EjercicioParcial-master\Entidad\obj\Debug\netstandard2.1\Entidad.pdb
