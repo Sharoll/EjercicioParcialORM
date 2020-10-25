@@ -18,12 +18,9 @@ namespace parcialdotnet.Controllers
     public class PersonaController :  ControllerBase
     {
         private readonly PersonaService _personaService;
-        public IConfiguration Configuration { get; }
 
         public PersonaController(EjercicioParcialContext context){
     
-            
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             _personaService = new PersonaService(context);
         }
         // GET: api/Persona
@@ -32,13 +29,14 @@ namespace parcialdotnet.Controllers
             var personas = _personaService.ConsultarTodos().Select(p=> new PersonaViewModel(p));
             return personas;
         }
-        
+         
+         
         // POST: api/Persona
         [HttpPost]
         public ActionResult<PersonaViewModel> Post(PersonaInputModel personaInput){
             Persona persona = MapearPersona(personaInput);
             var response = _personaService.Guardar(persona);
-            
+
             if (response.Error)
             {
             return BadRequest(response.Mensaje);
