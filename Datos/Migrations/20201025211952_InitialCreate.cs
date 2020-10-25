@@ -7,6 +7,7 @@ namespace Datos.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            
             migrationBuilder.CreateTable(
                 name: "Personas",
                 columns: table => new
