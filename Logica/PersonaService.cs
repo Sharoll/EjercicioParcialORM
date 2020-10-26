@@ -1,8 +1,10 @@
-﻿using Datos;
+﻿using System.Security.Permissions;
+using Datos;
 using Entidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Logica
 {
@@ -19,6 +21,10 @@ namespace Logica
         {
             try
             {
+                var personaBuscada = _context.Personas.Find(persona.Identificacion);
+                if(personaBuscada != null){
+                    return new GuardarPersonaResponse("Error, ya registrarada");
+                }
                 _context.Personas.Add(persona);
                 _context.SaveChanges();
                 return new GuardarPersonaResponse(persona);
@@ -32,7 +38,7 @@ namespace Logica
         public List<Persona> ConsultarTodos()
         {
            
-            List<Persona> personas = _context.Personas.ToList();
+            List<Persona> personas = _context.Personas.Include(p => p.Apoyo).ToList();
             return personas;
         }
        

@@ -6,8 +6,11 @@ namespace Entidad
 {
     public class Persona
     {
-        [Key]
+        public Persona(){
+            Apoyo = new Apoyo();
+        }
 
+        [Key]
         [Column(TypeName = "nvarchar(15)")]
         public string Identificacion { get; set; }
 
@@ -23,20 +26,7 @@ namespace Entidad
         [Column(TypeName = "int")]
         public int Edad { get; set; }
        
-        [Column(TypeName = "nvarchar(20)")]
-        public string Departamento { get; set; }
-
-        [Column(TypeName = "nvarchar(20)")]
-        public string Ciudad { get; set; }
-
-        [Column(TypeName = "decimal(18,0)")]
-        public decimal valorApoyo { get; set; }
-
-        [Column(TypeName = "nvarchar(20)")]
-        public string Modalidad { get; set; }
-
-        [Column(TypeName = "Date")]
-        public DateTime Fecha { get; set; }
+       public Apoyo Apoyo {get;set;}
         
     }
 }

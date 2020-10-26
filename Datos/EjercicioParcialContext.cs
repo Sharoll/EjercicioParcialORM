@@ -9,6 +9,8 @@ namespace Datos
 
         }
         public DbSet<Persona> Personas { get; set; }
+        
+        public DbSet<Apoyo> Apoyos { get; set; }
        
     }
 }

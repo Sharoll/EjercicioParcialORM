@@ -1,4 +1,3 @@
-
 using System;
 using Entidad;
 
@@ -11,11 +10,7 @@ namespace parcialdotnet.Models
         public string Apellido { get; set; }
         public string Sexo { get; set; }
         public int Edad { get; set; }
-        public string Departamento { get; set; }
-        public string Ciudad { get; set; }
-        public decimal valorApoyo { get; set; }
-        public string Modalidad { get; set; }
-        public DateTime Fecha { get; set; }
+        public Apoyo Apoyo {get;set;}
     }
 
     public class PersonaViewModel : PersonaInputModel
@@ -31,11 +26,7 @@ namespace parcialdotnet.Models
             Apellido = persona.Apellido;
             Sexo = persona.Sexo;
             Edad = persona.Edad;
-            Departamento = persona.Departamento;
-            Ciudad = persona.Ciudad;
-            valorApoyo = persona.valorApoyo;
-            Modalidad = persona.Modalidad;
-            Fecha = persona.Fecha;
+            Apoyo = persona.Apoyo;
             
         }
     }

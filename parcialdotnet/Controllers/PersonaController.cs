@@ -1,3 +1,7 @@
+using System.Runtime.ExceptionServices;
+using System.ComponentModel;
+using System.IO.Pipes;
+using System.Security.Permissions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,19 +49,19 @@ namespace parcialdotnet.Controllers
         }
         
         private Persona MapearPersona(PersonaInputModel personaInput){
-            var persona = new Persona
-            {
-                Identificacion = personaInput.Identificacion,
-                Nombre = personaInput.Nombre,
-                Apellido = personaInput.Apellido,
-                Sexo = personaInput.Sexo,
-                Edad = personaInput.Edad,
-                Departamento = personaInput.Departamento,
-                Ciudad = personaInput.Ciudad,
-                valorApoyo = personaInput.valorApoyo,
-                Modalidad = personaInput.Modalidad,
-                Fecha = personaInput.Fecha
-            };
+            var persona = new Persona();
+            
+                persona.Identificacion = personaInput.Identificacion;
+                persona.Nombre = personaInput.Nombre;
+                persona.Apellido = personaInput.Apellido;
+                persona.Sexo = personaInput.Sexo;
+                persona.Edad = personaInput.Edad;
+                persona.Apoyo.Departamento = personaInput.Apoyo.Departamento;
+                persona.Apoyo.Ciudad = personaInput.Apoyo.Ciudad;
+                persona.Apoyo.valorApoyo = personaInput.Apoyo.valorApoyo;
+                persona.Apoyo.Modalidad = personaInput.Apoyo.Modalidad;
+                persona.Apoyo.Fecha = personaInput.Apoyo.Fecha;
+            
             return persona;
         }
 

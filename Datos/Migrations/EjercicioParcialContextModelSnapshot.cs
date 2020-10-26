@@ -19,6 +19,33 @@ namespace Datos.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Entidad.Apoyo", b =>
+                {
+                    b.Property<int>("Codigo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Departamento")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("Date");
+
+                    b.Property<string>("Modalidad")
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<decimal>("valorApoyo")
+                        .HasColumnType("decimal(18,0)");
+
+                    b.HasKey("Codigo");
+
+                    b.ToTable("Apoyos");
+                });
+
             modelBuilder.Entity("Entidad.Persona", b =>
                 {
                     b.Property<string>("Identificacion")
@@ -27,20 +54,11 @@ namespace Datos.Migrations
                     b.Property<string>("Apellido")
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Ciudad")
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Departamento")
-                        .HasColumnType("nvarchar(20)");
+                    b.Property<int?>("ApoyoCodigo")
+                        .HasColumnType("int");
 
                     b.Property<int>("Edad")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("Date");
-
-                    b.Property<string>("Modalidad")
-                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(20)");
@@ -48,12 +66,18 @@ namespace Datos.Migrations
                     b.Property<string>("Sexo")
                         .HasColumnType("nvarchar(10)");
 
-                    b.Property<decimal>("valorApoyo")
-                        .HasColumnType("decimal(18,0)");
-
                     b.HasKey("Identificacion");
 
+                    b.HasIndex("ApoyoCodigo");
+
                     b.ToTable("Personas");
+                });
+
+            modelBuilder.Entity("Entidad.Persona", b =>
+                {
+                    b.HasOne("Entidad.Apoyo", "Apoyo")
+                        .WithMany()
+                        .HasForeignKey("ApoyoCodigo");
                 });
 #pragma warning restore 612, 618
         }
